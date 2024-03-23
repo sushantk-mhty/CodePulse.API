@@ -5,6 +5,7 @@ using CodePulse.API.Repositories.Interface;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace CodePulse.API.Controllers
 {
@@ -19,7 +20,7 @@ namespace CodePulse.API.Controllers
             this.categoryRepository = categoryRepository;
         }
         [HttpPost]
-        [Authorize(Roles = "Writer")]
+       // [Authorize(Roles = "Writer")]
         public async Task<IActionResult> CreateCategory([FromBody] CreateCategoryRequestDto request)
         {
             //Map DTO to Domain Model
@@ -40,19 +41,25 @@ namespace CodePulse.API.Controllers
             return Ok(response);
         }
 
-        //GET: https://localhost:7163/api/Categories
+        //GET: https://localhost:7163/api/Categories?query=queryname&sortBy=name&sortDirection=desc&pageNumber=2&pageSize=5
         [HttpGet]
         
-        public async Task<IActionResult> GetAllCategories()
+        public async Task<IActionResult> GetAllCategories([FromQuery] string? query, 
+                                                          [FromQuery] string? sortBy, 
+                                                          [FromQuery] string? sortDirection,
+                                                          [FromQuery] int? pageNumber,
+                                                          [FromQuery] int? pageSize
+                                                          )
         {
-           var categories= await categoryRepository.GetAllAsync();
+           var categories= await categoryRepository.GetAllAsync(query,sortBy,sortDirection,pageNumber,pageSize);
 
             //Map Domain Model to DTO
             var response=new List<CategoryDto>();
             foreach (var category in categories)
             {
                 response.Add(new CategoryDto 
-                { Id = category.Id, 
+                { 
+                    Id = category.Id, 
                     Name = category.Name , 
                     UrlHandle=category.UrlHandle
                 });
@@ -141,6 +148,15 @@ namespace CodePulse.API.Controllers
                 UrlHandle = category.UrlHandle
             };
             return Ok(response);
+        }
+        //GET 
+        [HttpGet]
+        [Route("count")]
+        public async Task<IActionResult> GetCategoriesTotal()
+        {
+            var count= await categoryRepository.GetCountAsync();    
+            return Ok(count);
+
         }
 
     }

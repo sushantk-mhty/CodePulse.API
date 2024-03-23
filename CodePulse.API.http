@@ -1,0 +1,9 @@
+﻿@CodePulse.API_HostAddress = https://localhost:7163
+
+GET {{CodePulse.API_HostAddress}}/api/categories
+
+###
+
+GET {{CodePulse.API_HostAddress}}/api/blogposts/{urlHandle}
+
+###

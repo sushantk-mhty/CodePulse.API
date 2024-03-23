@@ -68,7 +68,6 @@ D:\Dev-Project\Udemy\CodePulse\API\CodePulse.API\CodePulse.API\obj\Debug\net7.0\
 D:\Dev-Project\Udemy\CodePulse\API\CodePulse.API\CodePulse.API\obj\Debug\net7.0\staticwebassets.build.json
 D:\Dev-Project\Udemy\CodePulse\API\CodePulse.API\CodePulse.API\obj\Debug\net7.0\staticwebassets.development.json
 D:\Dev-Project\Udemy\CodePulse\API\CodePulse.API\CodePulse.API\obj\Debug\net7.0\scopedcss\bundle\CodePulse.API.styles.css
-D:\Dev-Project\Udemy\CodePulse\API\CodePulse.API\CodePulse.API\obj\Debug\net7.0\CodePulse.API.csproj.CopyComplete
 D:\Dev-Project\Udemy\CodePulse\API\CodePulse.API\CodePulse.API\obj\Debug\net7.0\CodePulse.API.dll
 D:\Dev-Project\Udemy\CodePulse\API\CodePulse.API\CodePulse.API\obj\Debug\net7.0\refint\CodePulse.API.dll
 D:\Dev-Project\Udemy\CodePulse\API\CodePulse.API\CodePulse.API\obj\Debug\net7.0\CodePulse.API.pdb
@@ -81,3 +80,5 @@ D:\Dev-Project\Udemy\CodePulse\API\CodePulse.API\CodePulse.API\bin\Debug\net7.0\
 D:\Dev-Project\Udemy\CodePulse\API\CodePulse.API\CodePulse.API\bin\Debug\net7.0\Microsoft.Extensions.Identity.Core.dll
 D:\Dev-Project\Udemy\CodePulse\API\CodePulse.API\CodePulse.API\bin\Debug\net7.0\Microsoft.Extensions.Identity.Stores.dll
 D:\Dev-Project\Udemy\CodePulse\API\CodePulse.API\CodePulse.API\bin\Debug\net7.0\Microsoft.Extensions.Options.dll
+D:\Dev-Project\Udemy\CodePulse\API\CodePulse.API\CodePulse.API\obj\Debug\net7.0\CodePulse.API.sourcelink.json
+D:\Dev-Project\Udemy\CodePulse\API\CodePulse.API\CodePulse.API\obj\Debug\net7.0\CodePuls.CA016005.Up2Date
